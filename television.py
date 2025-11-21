@@ -26,9 +26,9 @@ class Television:
         '''
         if self.__status:
             if self.__muted:
-                self.__muted = True
-            else:
                 self.__muted = False
+            else:
+                self.__muted = True
 
     def channel_down(self) -> None:
         '''
@@ -74,6 +74,6 @@ class Television:
         :return: tv status, channel, and volume
         '''
         if self.__muted:
-            return f'Power = [(self.__status)], Channel = [(self.__channel)] Volume = (Television.MIN_VOLUME)'
+            return f'Power = {self.__status}, Channel = {self.__channel}, Volume = {Television.MIN_VOLUME}'
         else:
-            return f'Power = [(self.__status)], Channel = [(self.__channel)] Volume = (self.__volume)'
+            return f'Power = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}'
